@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Przetwarzanie zapytania...</h2>
+<div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<p>Twoje zapytanie: {{ job_id }}</p>
+
+<meta http-equiv="refresh" content="2">
+{% endblock %}

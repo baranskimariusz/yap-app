@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Wyszukiwanie kanji{% endblock %}
+{% block content %}
+<h1>Wyszukiwanie kanji</h1>
+<form method="POST">
+    <p>
+        Wprowadź wymowę (on'yomi lub kun'yomi):<br>
+        <input type="text" name="reading">
+    </p>
+    <p><input type="submit" value="Szukaj"></p>
+</form>
+
+{% if kanji_list %}
+    <h2>Wyniki:</h2>
+    <ul>
+        {% for kanji in kanji_list %}
+            <li>
+                {{ kanji.character }} - Znaczenia: {{ kanji.meanings }}
+                <br>
+                On'yomi: {{ kanji.on_yomi }}
+                <br>
+                Kun'yomi: {{ kanji.kun_yomi }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    {% if request.method == 'POST' %}
+        <p>Nie znaleziono kanji dla podanej wymowy.</p>
+    {% endif %}
+{% endif %}
+{% endblock %}

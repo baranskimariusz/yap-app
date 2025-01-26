@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Wynik zapytania</h2>
+<p><strong>Twoje pytanie:</strong> {{ user_input }}</p>
+<p><strong>Odpowiedź:</strong> {{ bot_response }}</p>
+<a href="{{ url_for('chat') }}">Nowe zapytanie</a>
+{% endblock %}

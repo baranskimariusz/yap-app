@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}YapApp{% endblock %}
+{% block content %}
+<div class="container mx-auto px-6 py-8">
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="text-4xl font-title leading-snug text-neutral-950">Hej, tu YapApp!</h1>
+            <p class="mb-8">
+                {% if current_user.is_authenticated %}
+                    Przejdź do <a href="{{ url_for('dashboard') }}" class="text-primary-color hover:underline">Panelu użytkownika</a>
+                {% else %}
+                    <a href="{{ url_for('register') }}" class="text-primary-color hover:underline">Zarejestruj się</a> lub <a href="{{ url_for('login') }}" class="text-primary-color hover:underline">zaloguj się</a>, aby rozpocząć naukę.
+                {% endif %}
+            </p>
+        </div>
+        <img src="{{ url_for('static', filename='images/logo-2.png') }}" alt="YapApp Logo" class="hero-logo">
+    </div>
+    <div class="features flex flex-wrap justify-between gap-6">
+        <div class="feature-card bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-medium mb-4">Nauka Kanji</h2>
+            <p>Poznaj znaczenie i czytanie znaków kanji poprzez interaktywne ćwiczenia.</p>
+        </div>
+        
+        <div class="feature-card bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-medium mb-4">Ćwiczenia z czasowników</h2>
+            <p>Opanuj odmiany japońskich czasowników w różnych formach i czasach.</p>
+        </div>
+        
+        <div class="feature-card bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-medium mb-4">Śledzenie postępów</h2>
+            <p>Monitoruj swoje osiągnięcia i rozwijaj się z każdym dniem nauki.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

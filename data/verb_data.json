@@ -1,0 +1,176 @@
+[
+    {
+        "base_form": "食べる",
+        "masu_form": "食べます",
+        "eng": "eat",
+        "pl": "jeść"
+    },
+    {
+        "base_form": "見る",
+        "masu_form": "見ます",
+        "eng": "see, look",
+        "pl": "widzieć, patrzeć"
+    },
+    {
+        "base_form": "話す",
+        "masu_form": "話します",
+        "eng": "speak, talk",
+        "pl": "mówić, rozmawiać"
+    },
+    {
+        "base_form": "行く",
+        "masu_form": "行きます",
+        "eng": "go",
+        "pl": "iść, jechać"
+    },
+    {
+        "base_form": "来る",
+        "masu_form": "来ます",
+        "eng": "come",
+        "pl": "przychodzić, przyjeżdżać"
+    },
+    {
+        "base_form": "する",
+        "masu_form": "します",
+        "eng": "do",
+        "pl": "robić"
+    },
+    {
+        "base_form": "読む",
+        "masu_form": "読みます",
+        "eng": "read",
+        "pl": "czytać"
+    },
+    {
+        "base_form": "書く",
+        "masu_form": "書きます",
+        "eng": "write",
+        "pl": "pisać"
+    },
+    {
+        "base_form": "聞く",
+        "masu_form": "聞きます",
+        "eng": "hear, listen",
+        "pl": "słyszeć, słuchać"
+    },
+    {
+        "base_form": "見せる",
+        "masu_form": "見せます",
+        "eng": "show",
+        "pl": "pokazywać"
+    },
+    {
+        "base_form": "立つ",
+        "masu_form": "立ちます",
+        "eng": "stand",
+        "pl": "stać"
+    },
+    {
+        "base_form": "座る",
+        "masu_form": "座ります",
+        "eng": "sit",
+        "pl": "siedzieć"
+    },
+    {
+        "base_form": "買う",
+        "masu_form": "買います",
+        "eng": "buy",
+        "pl": "kupować"
+    },
+    {
+        "base_form": "売る",
+        "masu_form": "売ります",
+        "eng": "sell",
+        "pl": "sprzedawać"
+    },
+    {
+        "base_form": "作る",
+        "masu_form": "作ります",
+        "eng": "make",
+        "pl": "robić, tworzyć"
+    },
+    {
+        "base_form": "分かる",
+        "masu_form": "分かります",
+        "eng": "understand",
+        "pl": "rozumieć"
+    },
+    {
+        "base_form": "教える",
+        "masu_form": "教えます",
+        "eng": "teach",
+        "pl": "uczyć"
+    },
+    {
+        "base_form": "勉強する",
+        "masu_form": "勉強します",
+        "eng": "study",
+        "pl": "uczyć się"
+    },
+    {
+        "base_form": "使う",
+        "masu_form": "使います",
+        "eng": "use",
+        "pl": "używać"
+    },
+    {
+        "base_form": "飲む",
+        "masu_form": "飲みます",
+        "eng": "drink",
+        "pl": "pić"
+    },
+    {
+        "base_form": "歩く",
+        "masu_form": "歩きます",
+        "eng": "walk",
+        "pl": "chodzić"
+    },
+    {
+        "base_form": "泳ぐ",
+        "masu_form": "泳ぎます",
+        "eng": "swim",
+        "pl": "pływać"
+    },
+    {
+        "base_form": "開ける",
+        "masu_form": "開けます",
+        "eng": "open",
+        "pl": "otwierać"
+    },
+    {
+        "base_form": "閉める",
+        "masu_form": "閉めます",
+        "eng": "close",
+        "pl": "zamykać"
+    },
+    {
+        "base_form": "待つ",
+        "masu_form": "待ちます",
+        "eng": "wait",
+        "pl": "czekać"
+    },
+    {
+        "base_form": "忘れる",
+        "masu_form": "忘れます",
+        "eng": "forget",
+        "pl": "zapominać"
+    },
+    {
+        "base_form": "覚える",
+        "masu_form": "覚えます",
+        "eng": "remember, memorize",
+        "pl": "pamiętać, zapamiętywać"
+    },
+    {
+        "base_form": "住む",
+        "masu_form": "住みます",
+        "eng": "live, reside",
+        "pl": "mieszkać"
+    },
+    {
+        "base_form": "持つ",
+        "masu_form": "持ちます",
+        "eng": "hold, possess",
+        "pl": "trzymać, posiadać"
+    }
+]

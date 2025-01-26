@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Rejestracja{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="text-center mb-0">Rejestracja</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {{ form.hidden_tag() }}
+                        
+                        <div class="form-group mb-3">
+                            {{ form.username.label(class="form-label") }}
+                            {{ form.username(class="form-control", placeholder="Wprowadź nazwę użytkownika") }}
+                            {% for error in form.username.errors %}
+                                <div class="alert alert-danger mt-1">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            {{ form.password.label(class="form-label") }}
+                            {{ form.password(class="form-control", placeholder="Wprowadź hasło") }}
+                            {% for error in form.password.errors %}
+                                <div class="alert alert-danger mt-1">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            {{ form.password2.label(class="form-label") }}
+                            {{ form.password2(class="form-control", placeholder="Potwierdź hasło") }}
+                            {% for error in form.password2.errors %}
+                                <div class="alert alert-danger mt-1">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            {{ form.submit(class="btn btn-primary btn-block") }}
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <strong>Wymagania hasła:</strong>
+                        <ul class="list-unstyled mt-2">
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Minimum 8 znaków</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Co najmniej 1 duża litera (A-Z)</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Co najmniej 1 mała litera (a-z)</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Co najmniej 1 cyfra (0-9)</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Co najmniej 1 znak specjalny (@$!%*?&)</li>
+                        </ul>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

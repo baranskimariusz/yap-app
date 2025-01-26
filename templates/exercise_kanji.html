@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Ćwiczenie rozpoznawania kanji{% endblock %}
+{% block content %}
+<h1>Ćwiczenie rozpoznawania kanji</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>Podaj odczyt znaku: <strong>{{ form.kanji.data }}</strong></p>
+    <p>
+        {{ form.user_input.label }}<br>
+        {{ form.user_input(size=64) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

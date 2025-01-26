@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Chatbot{% endblock %}
+{% block content %}
+<h1>Porozmawiaj z tutorem</h1>
+<form method="POST">
+    <p>
+        Wpisz swoje pytanie:<br>
+        <textarea name="user_input" rows="4" cols="50">{{ user_input or '' }}</textarea>
+    </p>
+    <p><input type="submit" value="Wyślij"></p>
+</form>
+
+{% if bot_response %}
+    <h2>Odpowiedź tutora:</h2>
+    <p>{{ bot_response }}</p>
+{% endif %}
+{% endblock %}

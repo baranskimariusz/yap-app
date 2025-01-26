@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Statystyki{% endblock %}
+{% block content %}
+<h1>Twoje statystyki</h1>
+
+<h2>Ogólne statystyki</h2>
+<p>Łączna liczba ćwiczeń: {{ total_exercises }}</p>
+<p>Poprawnych odpowiedzi: {{ total_correct }}</p>
+<p>Procent poprawnych odpowiedzi: {{ overall_percentage|round(2) }}%</p>
+
+<h2>Statystyki według typu ćwiczeń</h2>
+{% for exercise_type, stats in stats_by_type.items() %}
+    <h3>
+        {% if exercise_type == 'verb_conjugation' %}
+            Odmiana czasowników
+        {% elif exercise_type == 'kanji_reading' %}
+            Czytanie kanji
+        {% else %}
+            {{ exercise_type }}
+        {% endif %}
+    </h3>
+    <p>Liczba ćwiczeń: {{ stats.total }}</p>
+    <p>Poprawnych odpowiedzi: {{ stats.correct }}</p>
+    <p>Procent poprawnych odpowiedzi: {{ stats.percentage|round(2) }}%</p>
+{% endfor %}
+
+<h2>Historia ćwiczeń</h2>
+<table border="1">
+    <tr>
+        <th>Typ ćwiczenia</th>
+        <th>Wynik</th>
+        <th>Czas</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>
+            {% if result.exercise_type == 'verb_conjugation' %}
+                Odmiana czasowników
+            {% elif result.exercise_type == 'kanji_reading' %}
+                Czytanie kanji
+            {% else %}
+                {{ result.exercise_type }}
+            {% endif %}
+        </td>
+        <td>{{ 'Poprawnie' if result.score == 1 else 'Niepoprawnie' }}</td>
+        <td>{{ result.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
