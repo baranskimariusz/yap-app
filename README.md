@@ -174,7 +174,26 @@ Architektura: Docker Compose, load balancing, DigitalOcean Droplet
 
 ### Scenariusze testowe
 
+#### Pełny test:<br>
+https://github.com/user-attachments/assets/93391bbb-fb84-4d20-b7cd-bc0e4eeec524
+
+#### Test zapytań:<br>
+https://github.com/user-attachments/assets/1b091245-9c7e-4775-b2cb-5c87886bf2e1
+
 ### Sprawozdanie
+
+#### Pełny test:
+- Wszystkie przyciski są funkcjonalne.
+- Logowanie oraz rejestracja działa, walidacja wejścia zapobiega wartościom skrajnym.
+- Ćwiczenia obsługują poprawne oraz niepoprawne odpowiedzi.
+- Yomi-based indexing działa z częściowym oraz pełnym wyszukiwaniem.
+- Panel użytkownika jest funkcjonalny oraz możliwa jest nawigacja po całej stronie.
+- Historia oraz statystyki są poprawnie zapisywane oraz obliczane.
+
+#### Test zapytań:
+- Kolejka zapytań działa.
+- Zapytania są przetwarzane oraz indeksowane.
+- Odpowiedzi generowane są w kolejności wysłania zapytań.
 
 ## Licencja
 
