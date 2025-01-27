@@ -107,7 +107,7 @@ Aplikacja składa się z następujących komponentów:
 1. Frontend: HTML + CSS + JavaScript (Bootstrap)
 2. Backend: Flask (Python)
 3. Baza danych: PostgreSQL z wykorzystaniem ORM SQLAlchemy
-4. Model AI: Llama-7B (integracja przez llama.cpp)
+4. Model AI: Mistral-7B
 5. Serwer WWW: Nginx
 6. Konteneryzacja: Docker
 7. Hosting: DigitalOcean
@@ -149,7 +149,7 @@ Implementacja: Model `exercise_results` w `models.py`
 
 **W7: Bot konwersacyjny**<br>
 Status: Spełnione<br>
-Technologia: Llama-7B + `llama.cpp`
+Technologia: Mistral-7B + `llama.cpp`
 
 **W8: Własny system kodowania znaków**<br>
 Status: Spełnione<br>
