@@ -17,6 +17,7 @@ YapApp to platforma do nauki języka japońskiego, oferująca ćwiczenia, chatbo
 - **Rejestracja i logowanie użytkowników**
 - **Ćwiczenia odmiany czasowników**
 - **Ćwiczenia rozpoznawania znaków kanji**
+- **Yomi-based indexing**
 - **Statystyki postępów w nauce**
 - **Tutor-Chatbot AI**
 - **Responsywny interfejs użytkownika**
