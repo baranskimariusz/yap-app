@@ -42,7 +42,7 @@ YapApp to platforma do nauki języka japońskiego, oferująca ćwiczenia, chatbo
    ```
 2. Skonfiguruj zmienne środowiskowe:
    ```bash
-   mkdir .env
+   touch .env
    # Edytuj plik .env i ustaw odpowiednie wartości
    ```
 3. Zbuduj i uruchom kontenery:
