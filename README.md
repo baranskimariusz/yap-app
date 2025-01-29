@@ -12,37 +12,37 @@
 
 [English](README.md) | [Polski](README-pl.md)
 
-YapApp to platforma do nauki języka japońskiego, oferująca ćwiczenia, chatbot AI oraz system śledzenia postępów.
+YapApp is a platform for learning Japanese, offering exercises, an AI chatbot, and a progress tracking system.
 
-## Funkcjonalności
+## Features
 
-- **Rejestracja i logowanie użytkowników**
-- **Ćwiczenia odmiany czasowników**
-- **Ćwiczenia rozpoznawania znaków kanji**
+- **User registration and login**
+- **Verb conjugation exercises**
+- **Kanji recognition exercises**
 - **Yomi-based indexing**
-- **Statystyki postępów w nauce**
-- **Tutor-Chatbot AI**
-- **Responsywny interfejs użytkownika**
-- **Bezpieczne przechowywanie danych**
-- **Konteneryzacja**
-- **CRON jobs do scrapowania kanji z wykorzystaniem `kanjiapi.dev`**
+- **Learning progress statistics**
+- **Tutor AI Chatbot**
+- **Responsive user interface**
+- **Secure data storage**
+- **Containerization**
+- **CRON jobs for scraping kanji using `kanjiapi.dev`**
 
-## Instalacja
+## Installation
 
-### Wymagania wstępne
+### Prerequisites
 
 - Docker
 - Docker Compose
 - Python 3.9+
 
-### Kroki instalacyjne
+### Installation Steps
 
-1. Sklonuj repozytorium:
+1. Clone the repository:
    ```bash
    git clone https://github.com/baranskimariusz/Yap-App
    cd Yap-App
    ```
-2. Skonfiguruj zmienne środowiskowe:
+2. Build and run the containers:
    ```bash
    touch .env
    # Edytuj plik .env i ustaw odpowiednie wartości
@@ -51,14 +51,14 @@ YapApp to platforma do nauki języka japońskiego, oferująca ćwiczenia, chatbo
    ```bash
    docker compose up --build
    ```
-4. Zainicjuj bazę danych:
+4. Initialize the database:
    ```bash
    docker compose exec web flask reset-db
    ```
-5. Aplikacja będzie dostępna pod adresem:
+5. The application will be available at:
    HTTP: http://localhost:80
 
-## Struktura projektu
+## Project structure
 
 ```
 └── 📁Yap-App
@@ -102,107 +102,108 @@ YapApp to platforma do nauki języka japońskiego, oferująca ćwiczenia, chatbo
     └── scraper-cron.sh
 ```
 
-## Architektura
 
-Aplikacja składa się z następujących komponentów:
+## Architecture
+
+The application consists of the following components:
 
 1. Frontend: HTML + CSS + JavaScript (Bootstrap)
 2. Backend: Flask (Python)
-3. Baza danych: PostgreSQL z wykorzystaniem ORM SQLAlchemy
-4. Model AI: Mistral-7B
-5. Serwer WWW: Nginx
-6. Konteneryzacja: Docker
-7. Hosting: DigitalOcean
+3. Database: PostgreSQL with SQLAlchemy ORM 
+4. AI Model: Mistral-7B 
+5. Web Server: Nginx 
+6. Containerization: Docker 
+7. Hosting: DigitalOcean 
 
-### Wykorzystanie ORM (SQLAlchemy)
+### Use of ORM (SQLAlchemy)
 
-Aplikacja wykorzystuje SQLAlchemy jako ORM do zarządzania bazą danych PostgreSQL. Modele danych są zdefiniowane w pliku `models.py` i obejmują:<br>
+The application uses SQLAlchemy as an ORM to manage the PostgreSQL database. Data models are defined in the `models.py` file and include:<br>
 
-`user`: Model użytkownika z danymi uwierzytelniającymi<br>
-`verb`: Model czasowników japońskich<br>
-`kanji`: Model znaków kanji z odczytami i znaczeniami<br>
-`exercise_results`: Model wyników ćwiczeń użytkowników
+`user`: User model with authentication data<br>
+`verb`: Model for Japanese verbs<br>
+`kanji`: Model for kanji characters with readings and meanings<br>
+`exercise_results`: Model for storing users' exercise results
 
-## Wymagania i ich realizacja
+## Requirements and Implementation
 
-**W1: Rejestracja użytkownika**<br>
-Status: Spełnione<br>
-Implementacja: Ścieżka `/register` w `app.py`
+**R1: User Registration**<br>
+Status: Fulfilled<br>
+Implementation: `/register` route in `app.py`
 
-**W2: Logowanie użytkownika**<br>
-Status: Spełnione<br>
-Implementacja: Ścieżka `/login` z użyciem `Flask-Login`
+**R2: User Login**<br>
+Status: Fulfilled<br>
+Implementation: `/login` route using `Flask-Login`
 
-**W3: Baza danych użytkowników**<br>
-Status: Spełnione<br>
-Technologia: PostgreSQL + SQLAlchemy ORM
+**R3: User Database**<br>
+Status: Fulfilled<br>
+Technology: PostgreSQL + SQLAlchemy ORM
 
-**W4: Ćwiczenie odmiany czasowników**<br>
-Status: Spełnione<br>
-Implementacja: Ścieżka `/exercise/verb`
+**R4: Verb Conjugation Exercises**<br>
+Status: Fulfilled<br>
+Implementation: `/exercise/verb` route
 
-**W5: Ćwiczenie rozpoznawania znaków**<br>
-Status: Spełnione<br>
-Implementacja: Ścieżka `/exercise/kanji`
+**R5: Kanji Recognition Exercises**<br>
+Status: Fulfilled<br>
+Implementation: `/exercise/kanji` route
 
-**W6: Zapisywanie statystyk**<br>
-Status: Spełnione<br>
-Implementacja: Model `exercise_results` w `models.py`
+**R6: Saving Statistics**<br>
+Status: Fulfilled<br>
+Implementation: `exercise_results` model in `models.py`
 
-**W7: Bot konwersacyjny**<br>
-Status: Spełnione<br>
-Technologia: Mistral-7B + `llama.cpp`
+**R7: Conversational Bot**<br>
+Status: Fulfilled<br>
+Technology: Mistral-7B + `llama.cpp`
 
-**W8: Własny system kodowania znaków**<br>
-Status: Spełnione<br>
-Implementacja: Indeksowanie w pamięci w `app.py`
+**R8: Custom Character Encoding System**<br>
+Status: Fulfilled<br>
+Implementation: In-memory indexing in `app.py`
 
-**W9: Responsywny interfejs**<br>
-Status: Spełnione<br>
-Technologia: Bootstrap + własne style CSS
+**R9: Responsive Interface**<br>
+Status: Fulfilled<br>
+Technology: Bootstrap + custom CSS styles
 
-**W10: Wydajność**<br>
-Status: Spełnione<br>
-Rozwiązania: Gunicorn, optymalizacje zapytań
+**R10: Performance Optimization**<br>
+Status: Fulfilled<br>
+Solutions Used: Gunicorn, query optimizations
 
-**W11: Bezpieczeństwo danych**<br>
-Status: Spełnione<br>
-Funkcje: Hashowanie haseł, walidacja danych
+**R11: Data Security**<br>
+Status: Fulfilled<br>
+Features Included: Password hashing, data validation
 
-**W12: Skalowalność**<br>
-Status: Spełnione<br>
-Architektura: Docker Compose, load balancing, DigitalOcean Droplet
+**R12: Scalability**<br>
+Status: Fulfilled<br>
+Architecture Used: Docker Compose, load balancing, DigitalOcean Droplet
 
-## Testy
+## Tests
 
-### Scenariusze testowe
+### Test Scenarios
 
-#### Pełny test:<br>
+#### Full Test:<br>
 https://github.com/user-attachments/assets/93391bbb-fb84-4d20-b7cd-bc0e4eeec524
 
-#### Test zapytań:<br>
+#### Query Test:<br>
 https://github.com/user-attachments/assets/1b091245-9c7e-4775-b2cb-5c87886bf2e1
 
-### Sprawozdanie
+### Report
 
-#### Pełny test:
-- Wszystkie przyciski są funkcjonalne.
-- Logowanie oraz rejestracja działa, walidacja wejścia zapobiega wartościom skrajnym.
-- Ćwiczenia obsługują poprawne oraz niepoprawne odpowiedzi.
-- Yomi-based indexing działa z częściowym oraz pełnym wyszukiwaniem.
-- Panel użytkownika jest funkcjonalny oraz możliwa jest nawigacja po całej stronie.
-- Historia oraz statystyki są poprawnie zapisywane oraz obliczane.
+#### Full Test:
+- All buttons are functional.
+- Login and registration work; input validation prevents extreme values.
+- Exercises handle both correct and incorrect answers.
+- Yomi-based indexing works with partial and full searches.
+- The user panel is functional, enabling navigation throughout the site.
+- History and statistics are correctly saved and calculated.
 
-#### Test zapytań:
-- Kolejka zapytań działa.
-- Zapytania są przetwarzane oraz indeksowane.
-- Odpowiedzi generowane są w kolejności wysłania zapytań.
+#### Query Test:
+- Query queue works.
+- Queries are processed and indexed.
+- Responses are generated in the order queries are sent.
 
-## Licencja
+## License
 
-Projekt YapApp jest dostępny na licencji **MIT**. Szczegóły znajdują się w pliku `LICENSE`.
+The YapApp project is available under the **MIT License**. Details can be found in the `LICENSE` file.
 
-## Autorzy
+## Authors
 
 **Julia Kozłowska** @alealejulia <br>
-**Mariusz Barański** @baranskimariusz
+**Mariusz Barański** @baranskimariusz 
