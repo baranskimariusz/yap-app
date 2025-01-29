@@ -8,9 +8,9 @@
 
 <div align="center">
 
-</div>
-
 [English](README.md) | [Polski](README-pl.md)
+
+</div>
 
 YapApp is a platform for learning Japanese, offering exercises, an AI chatbot, and a progress tracking system.
 
