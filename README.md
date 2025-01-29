@@ -45,9 +45,9 @@ YapApp is a platform for learning Japanese, offering exercises, an AI chatbot, a
 2. Build and run the containers:
    ```bash
    touch .env
-   # Edytuj plik .env i ustaw odpowiednie wartości
+   # Edit the .env file and set appropriate values
    ```
-3. Zbuduj i uruchom kontenery:
+3. Build and run the containers:
    ```bash
    docker compose up --build
    ```
